@@ -49,6 +49,8 @@ resource "tls_cert_request" "peer" {
   private_key_pem = tls_private_key.peer[count.index].private_key_pem
 
   subject {
+    # https://kubernetes.io/docs/setup/best-practices/certificates/ recommends generating peer certificate with
+    # CN=kube-etcd-peer, however we generate unique cert for each peer.
     common_name  = "etcd-${var.peer_names[count.index]}"
     organization = var.organization
   }
