@@ -1,4 +1,4 @@
-# Required variables
+# Required variables.
 variable "root_ca_cert" {
   description = "Root CA certificate."
   type        = string
@@ -24,7 +24,7 @@ variable "peer_names" {
   default     = []
 }
 
-# Optional variables
+# Optional variables.
 variable "rsa_bits" {
   description = "Default number of RSA bits for certificates."
   type        = string

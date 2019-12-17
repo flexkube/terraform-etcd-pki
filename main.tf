@@ -1,4 +1,4 @@
-# =================== ETCD CA ======================
+# etcd CA private key and certificate.
 resource "tls_private_key" "etcd_ca" {
   algorithm = "RSA"
   rsa_bits  = var.rsa_bits
@@ -34,7 +34,7 @@ resource "tls_locally_signed_cert" "etcd_ca" {
   ]
 }
 
-# =================== PEER CERTS ======================
+# Peer certificates.
 resource "tls_private_key" "peer" {
   count = length(var.peer_ips)
 
