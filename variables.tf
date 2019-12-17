@@ -24,6 +24,21 @@ variable "peer_names" {
   default     = []
 }
 
+variable "server_ips" {
+  description = "Server IP addresses (one per server)."
+  default     = []
+}
+
+variable "server_names" {
+  description = "Server names."
+  default     = []
+}
+
+variable "client_cns" {
+  description = "List of CNs for client certificates to generate."
+  default     = []
+}
+
 # Optional variables.
 variable "rsa_bits" {
   description = "Default number of RSA bits for certificates."
