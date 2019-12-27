@@ -136,6 +136,7 @@ resource "tls_locally_signed_cert" "server" {
     "key_encipherment",
     "digital_signature",
     "server_auth",
+    "client_auth",
   ]
 }
 
